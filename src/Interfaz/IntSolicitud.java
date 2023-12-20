@@ -18,6 +18,7 @@ import Services.CarServices;
 import Services.DriverServices;
 import Services.Group_TourServices;
 import Services.Programming_TypeServices;
+import Services.ServicesLocator;
 
 import com.toedter.calendar.JDateChooser;
 
@@ -70,6 +71,7 @@ public class IntSolicitud extends JDialog {
 	 */
 	public static void main(String[] args) {
 		try {
+			ServicesLocator.establecerConeccion();
 			IntSolicitud dialog = new IntSolicitud();
 			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			dialog.setVisible(true);

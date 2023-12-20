@@ -45,8 +45,8 @@ public class CarServices {
 		    while (result.next()) {
 		    	Car t = new Car(result.getInt("id_car"),result.getString("car_number"),result.getString("car_brand"),result.getInt("number_of_seats"),result.getInt("id_cs"));
 		        list.add(t);
-		        System.out.println(result.getInt("id_car") + " " + result.getString("car_number") 
-		        + " " + result.getString("car_brand") + " " + result.getInt("number_of_seats") + " " + result.getInt("id_cs"));
+		      /*  System.out.println(result.getInt("id_car") + " " + result.getString("car_number") 
+		        + " " + result.getString("car_brand") + " " + result.getInt("number_of_seats") + " " + result.getInt("id_cs"));*/ 
 		    }
 		    
 		    ServicesLocator.getConnection().commit(); // se confirman los cambios
@@ -55,7 +55,7 @@ public class CarServices {
 		}
 	 
 	
-	   /* public static LinkedList<Car> obtenerCarrosDisponibles() throws SQLException, ClassNotFoundException {
+	 /*   public static LinkedList<Car> obtenerCarrosDisponibles() throws SQLException, ClassNotFoundException {
 	        LinkedList<Car> list = new LinkedList<Car>();
 
 	        
@@ -77,7 +77,7 @@ public class CarServices {
 	        System.out.println("salio carros disponibles");
 	        return list;
 	    }*/
-	
+
 	
 
 }
